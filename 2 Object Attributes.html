@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Object Attributes</title>
+    <script>
+
+        var obj = {
+            // extensible, classname, prototype
+
+        };
+
+        Object.preventExtensions(obj);
+
+        console.log('Is the object extensible? ', Object.isExtensible(obj));
+        obj.name = 'jahara';
+
+        console.log(obj.name);
+
+        console.log(Object.getPrototypeOf(obj));
+
+        function getClassNameAttribute(o) {
+            return /.+\s(.+)]/.exec(Object.prototype.toString(o))[1];
+        }
+
+        console.log(getClassNameAttribute(obj));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

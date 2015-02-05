@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Closures</title>
+    <script>
+
+        var x = 10;
+        function CreateClosure() {
+
+            return function () {
+                return x++;
+            }
+        }
+
+        var afn = CreateClosure();
+        var bfn = CreateClosure();
+
+        console.log(afn());
+        console.log(afn());
+        console.log(bfn());
+        console.log(afn());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

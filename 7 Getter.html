@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Private Variable</title>
+    <script>
+
+        function Security(apikey) {
+            Object.defineProperty(this, 'apikey', {
+                writable: false,
+                configurable: false,
+                get: function () {
+                    return apikey;
+                }
+            })
+        }
+
+        var secure = new Security('asdf-a464654asdf354a-afasdf4-f456a4sf65asdf');
+
+        console.log(secure.apikey);
+
+        secure.apikey = 'asdfsadf';
+
+        console.log(secure.apikey);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

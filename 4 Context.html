@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Functions</title>
+    <script>
+
+        var obj = {
+            name: 'wei',
+            test: function test() {
+                console.log('Name is ', this.name);
+            }
+        };
+
+        var x = {
+            name: 'jahara'
+        };
+
+        obj.test.call(x);
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
