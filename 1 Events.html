@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Events</title>
+
+</head>
+<body>
+    <button>Click Here</button>
+    <script>
+        // click keydown keyup submit reset
+        var button = document.querySelector('button');
+
+        var obj = {};
+        obj.name = 'wei';
+        obj.name = 'jahara';
+
+        button.addEventListener('click', function () {
+            console.log('This is the first handler!');
+        });
+        button.addEventListener('click', function () {
+            console.log('This is the second handler!');
+        });
+
+    </script>
+</body>
+</html>
